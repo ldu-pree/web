@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?PHP
 $c = 0;
-while ($ < 1000){
+while ($c < 1000){
 	echo "X";
 	$c++;
 }
