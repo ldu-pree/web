@@ -14,6 +14,7 @@
 		return ($ret);
     }
     $arrc = 0;
+    $myarr = array();
     $in = 1;
     while ($in < $argc)
     {
@@ -21,10 +22,20 @@
         $i = 0;
         while ($i <= sizeof($arr))
         {
-            print_r($arr[$i]);
-            print_r("\n");
+            $myarr[$arrc] = $arr[$i];
             $i++;
+            $arrc++;
         }
         $in++;
+        unset($arr);
+    }
+    $i = 0;
+    sort($myarr);
+    while ($i < $arrc)
+    {
+        echo $myarr[$i];
+        if ($myarr[$i] != '')
+            echo "\n";
+        $i++;
     }
 ?>
